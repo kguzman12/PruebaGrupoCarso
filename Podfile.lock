@@ -1,0 +1,20 @@
+PODS:
+  - Hex (6.1.0)
+  - iOSDropDown (0.4.0)
+
+DEPENDENCIES:
+  - Hex
+  - iOSDropDown
+
+SPEC REPOS:
+  trunk:
+    - Hex
+    - iOSDropDown
+
+SPEC CHECKSUMS:
+  Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
+
+PODFILE CHECKSUM: 3b62493c6ae6ccd97b41e73f482a7706567f605e
+
+COCOAPODS: 1.11.3
