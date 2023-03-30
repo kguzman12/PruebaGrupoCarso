@@ -8,20 +8,26 @@ import Foundation
 
 struct Pokemones: Codable{
     let count: Int?
+    let next, previous: String?
     let results: [Result]
     
     enum CodingKeys: String, CodingKey {
         case count
         case results
+        case next, previous
     }
     
-    init(count: Int?, results: [Result]) {
+    init(count: Int?, next: String?, previous: String?, results: [Result]) {
         self.count = count
+        self.next = next
+        self.previous = previous
         self.results = results
     }
     
     init() {
         self.count = 0
+        self.next = ""
+        self.previous = ""
         self.results = []
     }
 }

@@ -45,7 +45,7 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         
         loadDrop()
-        loadBackground()
+        //loadBackground()
     }
     
     func loadDrop(){
@@ -59,7 +59,7 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
        
     }
     
-    func loadBackground(){
+    /*func loadBackground(){
         pokemonViewModel.SearchTipo(tipo: "water", pokemon: { request, error in
             if let requestData = request {
                 DispatchQueue.main.async {
@@ -79,7 +79,7 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
                 self.present(alert, animated: false)
             }
         })
-    }
+    }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detalle" {
@@ -198,12 +198,12 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     @IBAction func btnPrevios(_ sender: UIButton) {
-        print("Previus")
-        pokemonViewModel.previusPagination(pokemon: { request, error in
+        //print("Previus")
+        pokemonViewModel.previusPagination(url: (pokemonesModel?.previous)!, pokemon: { request, error in
             if let requestData = request {
                 DispatchQueue.main.async {
                     self.pokemonesModel = requestData
-                    //print(self.pokemonesModel)
+                    print(self.pokemonesModel)
                     self.collectionView.reloadData()
                 }
             }
@@ -220,12 +220,13 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     @IBAction func btnNext(_ sender: UIButton) {
-        print("Next")
-        pokemonViewModel.nextPagination(pokemon: { request, error in
+        print("Next", pokemonesModel?.next)
+        
+        pokemonViewModel.nextPagination(url: (pokemonesModel?.next)!) { request, error in
             if let requestData = request {
                 DispatchQueue.main.async {
                     self.pokemonesModel = requestData
-                    //print(self.pokemonesModel)
+                    print(self.pokemonesModel)
                     self.collectionView.reloadData()
                 }
             }
@@ -238,7 +239,7 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
                 alert.addAction(aceptar)
                 self.present(alert, animated: false)
             }
-        })
+        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -251,7 +252,7 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
         }else if pokemonModel != nil {
             return 1
         } else {
-            return pokemonesModel?.count ?? 0
+            return pokemonesModel?.results.count ?? 0
         }
     }
     
@@ -261,15 +262,17 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
         cell.layer.cornerRadius = 5
         cell.backgroundColor = UIColor(hex: "#3899F8")
         
+        print(indexPath.row)
+        
         if especieModel?.pokemon.count != nil{
             cell.lblNombre.text = especieModel?.pokemon[indexPath.row].pokemon.name
-            
+
             let num = especieModel?.pokemon[indexPath.row].pokemon.url
             let newNumero = num?.replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "")
             let numero = newNumero?.replacingOccurrences(of: "/", with: "")
 
             cell.lblNumero.text = numero
-            
+
             let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(numero!).png")
             DispatchQueue.global().async {
                 guard let imageData = try? Data(contentsOf: url!)else{return}
@@ -278,11 +281,11 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
                         cell.imgPokemon.image = image
                 }
             }
-            
+
         } else if pokemonModel != nil {
             cell.lblNombre.text = pokemonModel?.name
             cell.lblNumero.text! = "\(pokemonModel?.id ?? 0)"
-            
+
             let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonModel?.id ?? 0).png")
             DispatchQueue.global().async {
                 guard let imageData = try? Data(contentsOf: url!)else{return}
@@ -292,15 +295,16 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
                 }
             }
         } else {
-            //print(pokemonesModel?.results.count)
-            cell.lblNombre.text = pokemonesModel?.results[indexPath.row].name
-            
+//            print(pokemonesModel?.results.count)
+            print(indexPath.row)
+            cell.lblNombre.text = " \(pokemonesModel!.results[indexPath.row].name.prefix(1).capitalized)\(pokemonesModel!.results[indexPath.row].name.dropFirst())"
+
             let num = pokemonesModel?.results[indexPath.row].url
             let newNumero = num?.replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "")
             let numero = newNumero?.replacingOccurrences(of: "/", with: "")
 
             cell.lblNumero.text = numero
-           
+
             let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(numero!).png")!
             DispatchQueue.global().async {
                 guard let imageData = try? Data(contentsOf: url)else{return}
@@ -310,7 +314,7 @@ class GetAllViewController: UIViewController, UICollectionViewDelegate, UICollec
                 }
             }
         }
-            
+
         return cell
     }
     

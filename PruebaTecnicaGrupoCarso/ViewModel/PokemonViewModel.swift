@@ -16,7 +16,8 @@ class PokemonViewModel {
     func GetAllPokemon(pokemon: @escaping(Pokemones?, Error?) -> Void){
         let decoder = JSONDecoder()
         let urlSession = URLSession.shared
-        let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+//        let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon")
         
         urlSession.dataTask(with: url!) { data, response, error in
             //print("Data \(String(describing: data))")
@@ -34,14 +35,15 @@ class PokemonViewModel {
         }.resume()
     }
     
-    func previusPagination(pokemon: @escaping(Pokemones?, Error?) -> Void){
+    
+    func previusPagination(url : String, pokemon: @escaping(Pokemones?, Error?) -> Void){
         let decoder = JSONDecoder()
         let urlSession = URLSession.shared
-        let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20")
+
+        let url = URL(string: url)
         
         urlSession.dataTask(with: url!) { data, response, error in
-            //print("Data \(String(describing: data))")
-            
+            print("Data \(String(describing: data))")
             if let data = data {
                 do {
                     var pok = Pokemones()
@@ -54,13 +56,13 @@ class PokemonViewModel {
         }.resume()
     }
     
-    func nextPagination(pokemon: @escaping(Pokemones?, Error?) -> Void){
+    func nextPagination(url : String,  pokemon: @escaping(Pokemones?, Error?) -> Void){
         let decoder = JSONDecoder()
         let urlSession = URLSession.shared
-        let url = URL(string: "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=40")
+        let url = URL(string: url)
         
         urlSession.dataTask(with: url!) { data, response, error in
-            //print("Data \(String(describing: data))")
+            print("Data \(String(describing: data))")
             
             if let data = data {
                 do {

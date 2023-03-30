@@ -104,15 +104,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72A8D791-4171-47E6-81C5-8EAB66CA3338"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaTecnicaGrupoCarso/ViewModel/PokemonViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "nextPagination(pokemon:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "nextPagination(url:pokemon:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -120,71 +120,23 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "341E5D89-7FA9-46E7-8661-147534404FF4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaTecnicaGrupoCarso/ViewModel/PokemonViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "previusPagination(pokemon:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "previusPagination(url:pokemon:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DDF157AC-A6D5-484D-A3C2-D9F68DFFC17C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
-            landmarkName = "btnNext(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DDF157AC-A6D5-484D-A3C2-D9F68DFFC17C - cae738bdf269e084"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PruebaTecnicaGrupoCarso.GetAllViewController.btnNext(__C.UIButton) -&gt; ()"
-                  moduleName = "PruebaTecnicaGrupoCarso"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookmba9/Documents/Ana%20Karen%20Guzman%20Rodriguez/PruebaTecnicaGrupoCarso/PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "224"
-                  endingLineNumber = "224"
-                  offsetFromSymbolStart = "224">
-               </Location>
-               <Location
-                  uuid = "DDF157AC-A6D5-484D-A3C2-D9F68DFFC17C - 9c50233cc25da22c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;PruebaTecnicaGrupoCarso.Pokemones&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PruebaTecnicaGrupoCarso.GetAllViewController.btnNext(__C.UIButton) -&gt; ()"
-                  moduleName = "PruebaTecnicaGrupoCarso"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookmba9/Documents/Ana%20Karen%20Guzman%20Rodriguez/PruebaTecnicaGrupoCarso/PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "225"
-                  endingLineNumber = "225"
-                  offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1F302599-65E6-4BCB-862F-290E95547FA8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
@@ -208,7 +160,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "202"
                   endingLineNumber = "202"
-                  offsetFromSymbolStart = "228">
+                  offsetFromSymbolStart = "88">
                </Location>
                <Location
                   uuid = "1F302599-65E6-4BCB-862F-290E95547FA8 - cabd74aa42e2a128"
@@ -223,7 +175,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "203"
                   endingLineNumber = "203"
-                  offsetFromSymbolStart = "236">
+                  offsetFromSymbolStart = "232">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -271,7 +223,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "180"
                   endingLineNumber = "180"
-                  offsetFromSymbolStart = "236">
+                  offsetFromSymbolStart = "232">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -279,47 +231,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "405D15A9-3236-4A9E-BD62-97123DA1CE8C"
+            uuid = "43D525A6-2422-4D10-9937-01306B851E3A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaTecnicaGrupoCarso/ViewModel/PokemonViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "previusPagination(url:pokemon:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A41B09E-1BE3-4F4F-9BA3-0168ADC3AD43"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaTecnicaGrupoCarso/ViewModel/PokemonViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "nextPagination(url:pokemon:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "417E9069-B5AA-400A-9F19-94C0B69EAAC3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "btnNext(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13B7351F-2072-42AA-9262-3B7E1DE18085"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "btnNext(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5555E041-DFEF-4EA9-918D-55566AE7964C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "loadBackground()"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "loadData()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "405D15A9-3236-4A9E-BD62-97123DA1CE8C - ea86dca77d065560"
+                  uuid = "5555E041-DFEF-4EA9-918D-55566AE7964C - c891317e03427a06"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "PruebaTecnicaGrupoCarso.GetAllViewController.loadBackground() -&gt; ()"
+                  symbolName = "PruebaTecnicaGrupoCarso.GetAllViewController.loadData() -&gt; ()"
                   moduleName = "PruebaTecnicaGrupoCarso"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbookmba9/Documents/Ana%20Karen%20Guzman%20Rodriguez/PruebaTecnicaGrupoCarso/PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
                   offsetFromSymbolStart = "36">
                </Location>
                <Location
-                  uuid = "405D15A9-3236-4A9E-BD62-97123DA1CE8C - 502151a8f8d53b2"
+                  uuid = "5555E041-DFEF-4EA9-918D-55566AE7964C - 8ffa236eb384b84f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;PruebaTecnicaGrupoCarso.Especies&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PruebaTecnicaGrupoCarso.GetAllViewController.loadBackground() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;PruebaTecnicaGrupoCarso.Pokemones&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PruebaTecnicaGrupoCarso.GetAllViewController.loadData() -&gt; ()"
                   moduleName = "PruebaTecnicaGrupoCarso"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/macbookmba9/Documents/Ana%20Karen%20Guzman%20Rodriguez/PruebaTecnicaGrupoCarso/PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "208">
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "232">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -327,63 +343,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "19CBC5F6-CA2A-44D1-8216-551370AB4B88"
+            uuid = "3D658EA3-AC60-4B69-88AB-F3440A658473"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D658EA3-AC60-4B69-88AB-F3440A658473 - 8ffa236eb384b84f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;PruebaTecnicaGrupoCarso.Pokemones&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PruebaTecnicaGrupoCarso.GetAllViewController.loadData() -&gt; ()"
+                  moduleName = "PruebaTecnicaGrupoCarso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba9/Documents/Ana%20Karen%20Guzman%20Rodriguez/PruebaTecnicaGrupoCarso/PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "3D658EA3-AC60-4B69-88AB-F3440A658473 - 8ffa236eb384b84f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;PruebaTecnicaGrupoCarso.Pokemones&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PruebaTecnicaGrupoCarso.GetAllViewController.loadData() -&gt; ()"
+                  moduleName = "PruebaTecnicaGrupoCarso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookmba9/Documents/Ana%20Karen%20Guzman%20Rodriguez/PruebaTecnicaGrupoCarso/PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E32F9F7-80C2-4F73-94E0-49C6F5B28EE3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4573F584-EBCE-4482-9E0E-8C88A7C71658"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaTecnicaGrupoCarso/ViewModel/PokemonViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "SearchTipo(tipo:pokemon:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "GetAllPokemon(pokemon:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0217E46D-3478-4903-8982-41CAEA6DBD02"
+            uuid = "B687C1BD-1AB3-4FA1-AF61-4FCF540603AE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
+            filePath = "PruebaTecnicaGrupoCarso/ViewModel/PokemonViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "loadBackground()"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "GetAllPokemon(pokemon:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CB130864-EDC0-446B-8EB9-35F49D65A8BE"
-            shouldBeEnabled = "Yes"
+            uuid = "F31BC65E-C961-4719-AE60-63A986318772"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3444975F-331E-4903-A269-A04A3371C813"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PruebaTecnicaGrupoCarso/Controller/GetAllViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>

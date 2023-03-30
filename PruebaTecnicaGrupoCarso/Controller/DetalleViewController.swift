@@ -8,13 +8,15 @@
 import UIKit
 
 class DetalleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var info: UIView!
     @IBOutlet weak var lblNobre: UILabel!
+    @IBOutlet var principalView: UIView!
     @IBOutlet weak var lblNumero: UILabel!
     @IBOutlet weak var spriteFrontal: UIImageView!
     @IBOutlet weak var spritSiny: UIImageView!
-    @IBOutlet weak var nombreStats: UILabel!
-    @IBOutlet weak var numeroStats: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var speed: UIProgressView!
+    @IBOutlet weak var defense: UIProgressView!
+    @IBOutlet weak var defenseSpecial: UIProgressView!
     
     let pokemonViewModel = PokemonViewModel()
     var pokemonesModel: Pokemones? = nil
@@ -24,10 +26,17 @@ class DetalleViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "TipoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TipoCell")
+        let tipo = Tipo()
+        
+        
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = info.frame
+        rectShape.position = info.center
+        rectShape.path = UIBezierPath(roundedRect: self.info.bounds, byRoundingCorners: [.topLeft , .topRight], cornerRadii: CGSize(width: 50, height: 50)).cgPath
+        
+        info.layer.mask = rectShape
+        
+    
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +54,6 @@ class DetalleViewController: UIViewController, UICollectionViewDelegate, UIColle
                     DispatchQueue.main.async {
                         self.pokemonModel = requestData
                         print(self.pokemonModel)
-                        self.collectionView.reloadData()
                     }
                 }
                 
@@ -63,7 +71,6 @@ class DetalleViewController: UIViewController, UICollectionViewDelegate, UIColle
                 if let requestData = request {
                     DispatchQueue.main.async {
                         self.pokemonModel = requestData
-                        //print(self.pokemonModel?.sprites.frontDefault)
                         
                         let url = URL(string: self.pokemonModel?.sprites.frontDefault ?? "")
                         DispatchQueue.global().async {
@@ -83,17 +90,26 @@ class DetalleViewController: UIViewController, UICollectionViewDelegate, UIColle
                             }
                         }
     
-                        self.lblNobre.text = self.pokemonModel?.name
-                        self.lblNumero.text = "\(self.pokemonModel?.id)"
-
-                        self.nombreStats.text = self.pokemonModel?.stats[0].stat.name
+                        self.lblNobre.text = "\(self.pokemonModel!.name.prefix(1).capitalized)\(self.pokemonModel!.name.dropFirst())"
+                
+                        self.lblNumero.text = "\(self.pokemonModel!.id)"
                         
                         let num = self.pokemonModel?.stats[0].stat.url
                         let newNumero = num?.replacingOccurrences(of: "https://pokeapi.co/api/v2/stat/", with: "")
                         let numero = newNumero?.replacingOccurrences(of: "/", with: "")
-                        self.numeroStats.text = numero
+//                        self.numeroStats.text = numero
                         
-                        self.collectionView.reloadData()
+                        let color  = Tipo.Color[(self.pokemonModel?.types[0].type.name)!]
+                        self.principalView.backgroundColor = UIColor(hex: color!)
+                        self.speed.tintColor = UIColor(hex: color!)
+                        print(self.pokemonModel!.stats[5].baseStat)
+                        print(Float((self.pokemonModel!.stats[5].baseStat)) / 100.0)
+                        self.speed.progress = Float((self.pokemonModel!.stats[5].baseStat)) / 100.0
+                        self.defense.tintColor = UIColor(hex: color!)
+                        self.defense.progress = Float((self.pokemonModel!.stats[2].baseStat)) / 100.0
+                        self.defenseSpecial.tintColor = UIColor(hex: color!)
+                        self.defenseSpecial.progress = Float((self.pokemonModel!.stats[4].baseStat)) / 100.0
+                        
                     }
                 }
                 
